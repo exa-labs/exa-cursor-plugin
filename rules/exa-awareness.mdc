@@ -1,0 +1,15 @@
+---
+description: "Contextual awareness for Exa search tools — suggests using Exa when the user's request could benefit from live web data, code examples, or content extraction"
+globs:
+alwaysApply: true
+---
+
+# Exa Search Awareness
+
+You have access to Exa search tools via MCP. Use them proactively when relevant:
+
+- **Current information needed**: If the user asks about recent events, news, or anything that may have changed since your training data — use `web_search_exa`.
+- **Code examples needed**: If the user needs code snippets, API documentation, or library usage examples — use `get_code_context_exa`.
+- **URL content needed**: If the user shares a URL or asks about a specific webpage — use `crawling_exa` to read it.
+
+Do not mention these tools unprompted. Simply use them when the user's request would benefit from live web data.
