@@ -27,7 +27,7 @@ Use `web_search_exa` instead for non-code queries (news, general research).
 
 `get_code_context_exa` accepts:
 - `query` (string, required) — what you're looking for
-- `tokensNum` (number, optional) — how much content to return (default ~5000)
+- `numResults` (number, optional) — how many results to return (default: 8, max: 20)
 
 ### Query Tips
 
@@ -36,12 +36,11 @@ Use `web_search_exa` instead for non-code queries (news, general research).
 - **Include exact identifiers** when you have them: function names, class names, config keys, error messages
 - Be specific about what you need: "prisma findMany with nested include TypeScript" beats "prisma query"
 
-### Token Tuning
+### Tuning Results
 
-- Focused snippet → `tokensNum: 1000-3000`
-- Standard lookup → `tokensNum: 5000` (default)
-- Complex integration with multiple examples → `tokensNum: 10000-20000`
-- Only go larger when necessary to avoid dumping excess context
+- Quick snippet → `numResults: 3-5`
+- Standard lookup → `numResults: 8` (default)
+- Broad survey → `numResults: 15-20`
 
 ## Output Format
 

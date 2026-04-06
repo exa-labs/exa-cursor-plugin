@@ -24,8 +24,11 @@ Use `web_search_exa` instead when you don't have a URL and need to find pages fi
 ## How to Crawl
 
 `crawling_exa` accepts:
-- `url` (string, required) — the URL to extract content from
-- `maxCharacters` (number, optional) — max characters to return (default: 3000)
+- `urls` (array of strings, required) — the URLs to extract content from. You can batch multiple URLs in one call.
+- `maxCharacters` (number, optional) — max characters to return per page (default: 3000)
+- `maxAgeHours` (number, optional) — max age of cached content in hours. Use 0 to always fetch fresh.
+- `subpages` (number, optional) — number of subpages to also crawl from each URL
+- `subpageTarget` (string, optional) — keywords to prioritize when selecting subpages
 
 ### Character Limits
 

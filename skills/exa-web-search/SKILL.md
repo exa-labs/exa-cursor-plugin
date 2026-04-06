@@ -26,7 +26,10 @@ Use `get_code_context_exa` instead for programming-related queries (see exa-code
 
 `web_search_exa` accepts:
 - `query` (string, required) — natural language search query
-- `numResults` (number, optional) — how many results to return
+- `numResults` (number, optional) — how many results to return (default: 8, max: 100)
+- `type` (string, optional) — `"auto"` (default, balanced) or `"fast"` (quicker results)
+- `freshness` (string, optional) — how recent results should be: `"24h"`, `"week"`, `"month"`, `"year"`, or `"any"`
+- `includeDomains` (array of strings, optional) — only return results from these domains
 
 ### Query Tips
 
