@@ -1,16 +1,16 @@
 ---
 name: exa-crawl
 description: "Content extraction using Exa. Gets the full text content of a specific webpage from a known URL. Use when you have a URL and need to read its contents."
-allowed-tools: mcp(exa:crawling_exa)
+allowed-tools: mcp(exa:web_fetch_exa)
 ---
 
-# Crawl URL (Exa)
+# Fetch URL (Exa)
 
 Extract content from: $ARGUMENTS
 
 ## Tool
 
-Use `crawling_exa` to get the full text of a webpage.
+Use `web_fetch_exa` to get the full text of a webpage.
 
 ## When to Use
 
@@ -21,17 +21,28 @@ Use `crawling_exa` to get the full text of a webpage.
 
 Use `web_search_exa` instead when you don't have a URL and need to find pages first.
 
-## How to Crawl
+## How to Fetch
 
-`crawling_exa` accepts:
-- `url` (string, required) — the URL to extract content from
-- `maxCharacters` (number, optional) — max characters to return (default: 3000)
+`web_fetch_exa` accepts:
+- `urls` (array of strings, required) — the URLs to extract content from
+- `maxCharacters` (number, optional) — max characters to return per page (default: 3000)
 
 ### Character Limits
 
 - Quick summary → `maxCharacters: 1000-2000`
 - Standard read → `maxCharacters: 3000` (default)
 - Full page content → `maxCharacters: 5000-10000`
+
+### Batching
+
+You can fetch multiple URLs in a single call:
+
+```
+web_fetch_exa({
+  "urls": ["https://example.com/page1", "https://example.com/page2"],
+  "maxCharacters": 3000
+})
+```
 
 ## Output Format
 
@@ -41,4 +52,4 @@ Use `web_search_exa` instead when you don't have a URL and need to find pages fi
 
 ## If the MCP Server Is Not Connected
 
-If `crawling_exa` is unavailable, tell the user to run `/exa-setup` to configure the connection.
+If `web_fetch_exa` is unavailable, tell the user to check their MCP connection in Cursor Settings → MCP.

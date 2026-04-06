@@ -5,15 +5,15 @@
     "email": "hello@exa.ai"
   },
   "metadata": {
-    "description": "Web search, code search, company research, and content extraction powered by Exa AI",
-    "version": "1.0.0"
+    "description": "Web search and content extraction powered by Exa AI",
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "exa",
       "source": "./",
-      "description": "Search the web, find code examples, research companies, and extract content from URLs — powered by Exa's neural search engine.",
-      "version": "1.0.0",
+      "description": "Search the web and extract content from URLs — powered by Exa's neural search engine.",
+      "version": "1.1.0",
       "author": {
         "name": "Exa",
         "email": "hello@exa.ai"
@@ -24,11 +24,10 @@
       "keywords": [
         "search",
         "web-search",
-        "code-search",
         "exa",
         "research",
         "mcp",
-        "crawling"
+        "content-extraction"
       ],
       "category": "productivity"
     }

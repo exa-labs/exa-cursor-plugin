@@ -19,8 +19,7 @@ Use `web_search_exa` for all web search requests.
 - Finding articles, blog posts, documentation
 - Any question where the answer may have changed since training data cutoff
 - General research and information gathering
-
-Use `get_code_context_exa` instead for programming-related queries (see exa-code-search skill).
+- Code examples, API docs, and library usage
 
 ## How to Search
 
@@ -52,4 +51,4 @@ For every claim or fact, cite the source inline:
 
 ## If the MCP Server Is Not Connected
 
-If `web_search_exa` is unavailable, tell the user to run `/exa-setup` to configure the connection.
+If `web_search_exa` is unavailable, tell the user to check their MCP connection in Cursor Settings → MCP.
