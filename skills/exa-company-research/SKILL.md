@@ -68,4 +68,4 @@ Example for researching a company:
 
 ## If the MCP Server Is Not Connected
 
-If `web_search_exa` is unavailable, tell the user to run `/exa-setup` to configure the connection.
+If `web_search_exa` is unavailable, tell the user to check their MCP connection in Cursor Settings → MCP.
