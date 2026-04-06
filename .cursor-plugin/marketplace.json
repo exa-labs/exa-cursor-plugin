@@ -1,0 +1,36 @@
+{
+  "name": "exa-cursor-plugin",
+  "owner": {
+    "name": "Exa",
+    "email": "hello@exa.ai"
+  },
+  "metadata": {
+    "description": "Web search, code search, company research, and content extraction powered by Exa AI",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "exa",
+      "source": "./",
+      "description": "Search the web, find code examples, research companies, and extract content from URLs — powered by Exa's neural search engine.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Exa",
+        "email": "hello@exa.ai"
+      },
+      "homepage": "https://docs.exa.ai",
+      "repository": "https://github.com/exa-labs/exa-cursor-plugin",
+      "license": "MIT",
+      "keywords": [
+        "search",
+        "web-search",
+        "code-search",
+        "exa",
+        "research",
+        "mcp",
+        "crawling"
+      ],
+      "category": "productivity"
+    }
+  ]
+}

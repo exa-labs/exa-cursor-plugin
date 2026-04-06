@@ -1,0 +1,42 @@
+---
+name: exa-best-practices
+description: "General best practices for using Exa search tools. Covers citation standards, tool selection, and search optimization."
+---
+
+# Exa Best Practices
+
+## Tool Selection
+
+| Need | Tool | When |
+|------|------|------|
+| Web search | `web_search_exa` | Current info, news, research, general questions |
+| Code search | `get_code_context_exa` | Code examples, API docs, library usage, debugging |
+| Read a URL | `crawling_exa` | Extract content from a known URL |
+
+## Citation Standards
+
+When using Exa search results, always cite sources:
+
+- **Inline citations**: Every fact or claim should reference its source
+- **Source URLs**: Include the actual URL, not just the title
+- **Sources section**: End responses with a list of all sources used
+- **Never fabricate URLs**: Only cite URLs that appear in search results
+
+## Search Quality Tips
+
+1. **Natural language queries** work better than keyword stuffing
+2. **Be specific** — include dates, names, versions when relevant
+3. **Multiple queries** with different phrasings improve coverage
+4. **Adjust result count** to match the depth needed (3-5 quick, 10-20 deep)
+
+## Getting Started
+
+1. Get your API key at https://dashboard.exa.ai/api-keys
+2. Run `/exa-setup` in Cursor to verify the connection
+3. Start searching with `/exa-search`, `/exa-code`, or `/exa-company`
+
+## Troubleshooting
+
+- **Tools not available**: Run `/exa-setup` to configure the MCP connection
+- **No results**: Try rephrasing the query or broadening search terms
+- **Rate limits**: Reduce `numResults` or add a brief delay between searches
