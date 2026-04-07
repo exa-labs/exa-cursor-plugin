@@ -42,6 +42,39 @@ Install from the [Cursor Marketplace](https://cursor.com/marketplace), or add to
 
 - `exa-awareness` — tells the agent to use Exa when it makes sense
 
+## Local Development
+
+To test the plugin locally without installing from the marketplace:
+
+1. Clone and open in Cursor:
+
+```bash
+git clone https://github.com/exa-labs/exa-cursor-plugin.git
+cursor exa-cursor-plugin
+```
+
+2. Skills and rules are auto-discovered from the standard directories. Type `/` in the chat to verify the `exa-*` skills are listed.
+
+3. Commands are not auto-discovered when testing locally. Symlink them into Cursor's project commands directory:
+
+```bash
+ln -s ../commands .cursor/commands
+```
+
+Type `/` again — the `exa-*` commands should now appear alongside the skills.
+
+4. The MCP server config is in `.cursor/mcp.json`. Cursor will prompt you to authenticate with Exa on first use.
+
+## Plugin Structure
+
+```
+.cursor-plugin/plugin.json   Plugin manifest
+.cursor/mcp.json             MCP server config (remote)
+skills/                      4 skills (auto-discovered)
+commands/                    3 slash commands
+rules/                       Awareness rule
+```
+
 ## Links
 
 - [Docs](https://docs.exa.ai)
