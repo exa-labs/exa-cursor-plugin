@@ -1,6 +1,6 @@
 ---
-name: exa-crawl
-description: "Content extraction using Exa. Gets the full text content of a specific webpage from a known URL. Use when you have a URL and need to read its contents."
+name: exa-fetch
+description: "Read a webpage's full content using Exa. Gets clean markdown text from a specific URL. Use when you have a URL and need to read its contents."
 allowed-tools: mcp(exa:web_fetch_exa)
 ---
 
