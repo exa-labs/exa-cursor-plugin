@@ -16,26 +16,26 @@ Install from the [Cursor Marketplace](https://cursor.com/marketplace), or add to
 }
 ```
 
-[Get your API key](https://dashboard.exa.ai/api-keys)
+[Get your API key](https://dashboard.exa.ai/api-keys) — when you first connect, Cursor will prompt you to authenticate via Exa's OAuth flow. Your API key is linked automatically.
 
 ## What's Included
 
 ### Tools (via MCP)
 
 - `web_search_exa` — search the web
-- `web_fetch_exa` — get the contents of a URL
+- `web_fetch_exa` — read a webpage's full content
 
 ### Commands
 
 - `/exa-search <query>` — web search
 - `/exa-company <query>` — company research
-- `/exa-crawl <url>` — read a URL
+- `/exa-fetch <url>` — read a URL
 
 ### Skills
 
 - `exa-web-search` — how to search the web with Exa
 - `exa-company-research` — how to research companies
-- `exa-crawl` — how to read URLs
+- `exa-fetch` — how to read URLs
 - `exa-best-practices` — general tips
 
 ### Rules
