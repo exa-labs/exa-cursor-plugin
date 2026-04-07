@@ -50,27 +50,28 @@ To test the plugin locally without installing from the marketplace:
 
 ```bash
 git clone https://github.com/exa-labs/exa-cursor-plugin.git
-cursor exa-cursor-plugin
 ```
 
-2. Skills and rules are auto-discovered from the standard directories. Type `/` in the chat to verify the `exa-*` skills are listed.
+Open the `exa-cursor-plugin` folder in Cursor (File → Open Folder).
 
-3. Commands are not auto-discovered when testing locally. Symlink them into Cursor's project commands directory:
+2. Symlink skills, rules, and commands into the `.cursor/` directory so Cursor discovers them:
 
 ```bash
+ln -s ../skills .cursor/skills
+ln -s ../rules .cursor/rules
 ln -s ../commands .cursor/commands
 ```
 
-Type `/` again — the `exa-*` commands should now appear alongside the skills.
+3. Reload the window (`Cmd+Shift+P` → "Reload Window"), then type `/` in the chat — the `exa-*` skills and commands should appear.
 
-4. The MCP server config is in `.cursor/mcp.json`. Cursor will prompt you to authenticate with Exa on first use.
+4. The MCP server config is in `.cursor/mcp.json`. Go to Cursor Settings → MCP, connect the "exa" server, and authenticate with your Exa API key.
 
 ## Plugin Structure
 
 ```
 .cursor-plugin/plugin.json   Plugin manifest
 .cursor/mcp.json             MCP server config (remote)
-skills/                      4 skills (auto-discovered)
+skills/                      4 skills
 commands/                    3 slash commands
 rules/                       Awareness rule
 ```
