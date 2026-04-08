@@ -5,9 +5,9 @@ description: Set up the Exa plugin — add the MCP server and connect it in Curs
 
 # Exa Plugin Setup
 
-## Step 1: Add the MCP server
+## You (the AI) must:
 
-Add this to your Cursor MCP config (`.cursor/mcp.json` or via Cursor Settings → MCP):
+1. Add the following MCP config to the project's `.cursor/mcp.json` file (create it if it doesn't exist):
 
 ```json
 {
@@ -19,20 +19,23 @@ Add this to your Cursor MCP config (`.cursor/mcp.json` or via Cursor Settings �
 }
 ```
 
-## Step 2: Enable the MCP server
+2. After adding the config, verify setup by checking if `web_search_exa` is available in your tool list.
 
-1. Navigate to **Cursor Settings → Tools & MCP**
-2. Find **exa** in the list
-3. Toggle it **on** (click the green enable button)
-4. Cursor will prompt you to authenticate — follow the OAuth flow to link your Exa API key
+## Request the user to:
 
-If you don't have an API key yet, get one at https://dashboard.exa.ai/api-keys
+1. Open **Cursor Settings → Tools & MCP**.
+2. Find **exa** in the list.
+3. Toggle it **on** (click the green enable button).
 
-## Step 3: Verify
+## Troubleshooting
 
-Try calling `web_search_exa` with any query. If it returns results, you're all set.
+If `web_search_exa` is still not available after setup:
 
-If it fails, check:
-- The MCP server is enabled (green) in Cursor Settings → Tools & MCP
-- You completed the authentication prompt
-- Your API key is valid at https://dashboard.exa.ai/api-keys
+### You (the AI) must:
+
+- Stop and do not attempt to use fallback tools or answer from your own knowledge.
+
+### Request the user to:
+
+- Confirm the MCP server shows as enabled (green) in **Cursor Settings → Tools & MCP**.
+- Restart Cursor if the MCP server was just added.
