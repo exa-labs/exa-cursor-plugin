@@ -19,11 +19,7 @@
     "mcp",
     "content-extraction"
   ],
-  "skills": [
-    "skills/exa-web-search/SKILL.md",
-    "skills/exa-fetch/SKILL.md",
-    "skills/exa-best-practices/SKILL.md"
-  ],
+  "skills": "./skills/",
   "rules": "./rules/",
   "mcpServers": "mcp.json",
   "commands": [
