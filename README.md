@@ -16,8 +16,6 @@ Install from the [Cursor Marketplace](https://cursor.com/marketplace), or add to
 }
 ```
 
-[Get your API key](https://dashboard.exa.ai/api-keys) — when you first connect, Cursor will prompt you to authenticate via Exa's OAuth flow. Your API key is linked automatically.
-
 ## What's Included
 
 ### Tools (via MCP)
