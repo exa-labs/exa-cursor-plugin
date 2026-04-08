@@ -1,6 +1,6 @@
 ---
 name: exa-fetch
-description: "URL content extraction using Exa. Gets clean markdown text from any webpage. Use when you have a specific URL and need its contents — articles, docs, blog posts, PDFs, or any web page. Triggers on: 'read this page', 'fetch this URL', 'extract content from', 'grab the text from', 'get the page at', 'what does this link say', or when a user shares a URL. Supports batching multiple URLs in a single call. Use exa-web-search instead when you don't have a URL yet."
+description: "Read a webpage's full content using Exa. Gets clean markdown text from any URL. Use when you have a specific URL and need its contents. Supports batching multiple URLs. Use exa-web-search instead when you need to find pages first."
 allowed-tools: mcp(exa:web_fetch_exa)
 ---
 
@@ -18,6 +18,8 @@ Use `web_fetch_exa` to get the full text of a webpage.
 - Reading documentation pages, blog posts, or articles
 - Extracting data from a known webpage
 - Following up on a search result to get full content
+
+Trigger phrases: "read this page", "fetch this URL", "extract content from", "get the page at", "what does this link say", or when a user shares a URL.
 
 Use `web_search_exa` instead when you don't have a URL and need to find pages first.
 
