@@ -27,14 +27,13 @@ Install from the [Cursor Marketplace](https://cursor.com/marketplace), or add to
 
 ### Commands
 
+- `/exa-setup` — set up the Exa MCP server
 - `/exa-search <query>` — web search
-- `/exa-company <query>` — company research
 - `/exa-fetch <url>` — read a URL
 
 ### Skills
 
 - `exa-web-search` — how to search the web with Exa
-- `exa-company-research` — how to research companies
 - `exa-fetch` — how to read URLs
 - `exa-best-practices` — general tips
 
@@ -70,7 +69,7 @@ Type `/` again — the `exa-*` commands should now appear alongside the skills.
 ```
 .cursor-plugin/plugin.json   Plugin manifest
 .cursor/mcp.json             MCP server config (remote)
-skills/                      4 skills (auto-discovered)
+skills/                      3 skills (auto-discovered)
 commands/                    3 slash commands
 rules/                       Awareness rule
 ```
