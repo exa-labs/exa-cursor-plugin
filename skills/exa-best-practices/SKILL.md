@@ -10,7 +10,7 @@ description: "General best practices for using Exa search tools. Covers citation
 | Need | Tool | When |
 |------|------|------|
 | Web search | `web_search_exa` | Current info, news, research, general questions, code examples |
-| Read a URL | `crawling_exa` | Extract content from a known URL |
+| Read a URL | `web_fetch_exa` | Extract content from a known URL |
 
 ## Citation Standards
 
