@@ -51,15 +51,17 @@ For every claim or fact, cite the source inline:
 
 ## Before You Start
 
-Check that the Exa MCP server is connected by confirming `web_search_exa` is available in your tool list.
+Check if Exa MCP is installed by confirming `web_search_exa` is available in your tool list.
 
 ## If the MCP Server Is Not Connected
 
-If `web_search_exa` is unavailable, **stop immediately**. Do NOT search the web yourself, do NOT use any built-in search tools, and do NOT try to answer the query from your own knowledge.
+### You (the AI) must:
 
-**Tell the user** (these are instructions for the user to follow, not for you):
+1. **Stop immediately** — do NOT search the web yourself, do NOT use any built-in search tools, and do NOT try to answer the query from your own knowledge.
+2. Inform the user that Exa MCP is not connected.
 
-1. "Exa MCP is not connected."
-2. "Run `/exa-setup` to add the MCP server."
-3. "Go to Cursor Settings → Tools & MCP and enable Exa."
-4. "Then retry your search."
+### Request the user to:
+
+1. Run the `/exa-setup` command in Cursor to add the Exa MCP server.
+2. Go to **Cursor Settings → Tools & MCP** and make sure Exa is toggled **on** (green).
+3. Retry their search after completing the above steps.

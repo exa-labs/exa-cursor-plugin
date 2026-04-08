@@ -36,5 +36,5 @@ When using Exa search results, always cite sources:
 
 ## Troubleshooting
 
-- **Tools not available**: Check if the Exa MCP server is installed. If `web_search_exa` or `web_fetch_exa` are not in your tool list, **tell the user**: "Exa MCP is not connected. Run `/exa-setup` to add the MCP server, then go to Cursor Settings → Tools & MCP and enable Exa."
+- **Tools not available**: Check if the Exa MCP server is installed. If `web_search_exa` or `web_fetch_exa` are not in your tool list, stop and request the user to: (1) run `/exa-setup` in Cursor to add the MCP server, and (2) go to **Cursor Settings → Tools & MCP** and make sure Exa is toggled **on** (green).
 - **No results**: Try rephrasing the query or broadening search terms
