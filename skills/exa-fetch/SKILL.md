@@ -50,11 +50,17 @@ web_fetch_exa({
 2. If the user asked a specific question, answer it using the page content
 3. Include the source URL
 
+## Before You Start
+
+Check that the Exa MCP server is connected by confirming `web_fetch_exa` is available in your tool list.
+
 ## If the MCP Server Is Not Connected
 
-If `web_fetch_exa` is unavailable, **stop immediately**. Do NOT try to fetch the URL yourself, do NOT use any built-in tools, and do NOT try to answer from your own knowledge. Instead, tell the user:
+If `web_fetch_exa` is unavailable, **stop immediately**. Do NOT try to fetch the URL yourself, do NOT use any built-in tools, and do NOT try to answer from your own knowledge.
 
-1. Exa MCP is not connected
-2. Run `/exa-setup` to add the MCP server
-3. Enable Exa in Cursor Settings → Tools & MCP
-4. Then retry the fetch
+**Tell the user** (these are instructions for the user to follow, not for you):
+
+1. "Exa MCP is not connected."
+2. "Run `/exa-setup` to add the MCP server."
+3. "Go to Cursor Settings → Tools & MCP and enable Exa."
+4. "Then retry your fetch."
