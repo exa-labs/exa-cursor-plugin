@@ -58,7 +58,7 @@ Check if Exa MCP is installed by confirming `web_fetch_exa` is available in your
 
 ### You (the AI) must:
 
-1. **Stop immediately** — do NOT try to fetch the URL yourself, do NOT use any built-in tools, and do NOT try to answer from your own knowledge.
+1. **Stop immediately** — do NOT try to fetch the URL yourself, do NOT use websearch, and do NOT try to answer from your own knowledge.
 2. Inform the user that Exa MCP is not connected.
 
 ### Request the user to:
