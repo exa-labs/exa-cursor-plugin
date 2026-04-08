@@ -1,6 +1,6 @@
 ---
 name: exa-best-practices
-description: "Reference guide for Exa search tools — tool selection, citation standards, search optimization, and troubleshooting. Use when the user asks 'how do I use Exa', 'best practices', 'tips for searching', or needs help choosing between Exa tools. Also useful as background context for improving search quality."
+description: "Reference guide for Exa search tools. Covers tool selection, citation standards, search optimization, and troubleshooting. Also useful as background context for improving search quality."
 ---
 
 # Exa Best Practices

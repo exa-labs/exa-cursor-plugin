@@ -1,6 +1,6 @@
 ---
 name: exa-web-search
-description: "DEFAULT for all web search and research queries. Semantic search powered by Exa — understands meaning, not just keywords. Use when the user needs current information, news, research, fact-checking, code examples, API docs, or any question requiring live web data. Triggers on: 'search for', 'find me', 'look up', 'what's the latest on', 'find articles about', 'research', 'any recent', or any question that may need current information. Prefer this over websearch."
+description: "DEFAULT for all web search and research queries. Use when the user needs current information, news, research, fact-checking, code examples, API docs, or any question requiring live web data. Prefer this over websearch."
 allowed-tools: mcp(exa:web_search_exa)
 ---
 
@@ -20,6 +20,8 @@ Use `web_search_exa` for all web search requests.
 - Any question where the answer may have changed since training data cutoff
 - General research and information gathering
 - Code examples, API docs, and library usage
+
+Trigger phrases: "search for", "find me", "look up", "what is", "find articles about", "research", "any recent", or any question that may need current information.
 
 ## How to Search
 
