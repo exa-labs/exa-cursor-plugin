@@ -23,7 +23,6 @@
   "commands": [
     "commands/exa-setup.md",
     "commands/exa-search.md",
-    "commands/exa-company.md",
     "commands/exa-fetch.md"
   ]
 }

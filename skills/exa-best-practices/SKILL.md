@@ -10,7 +10,7 @@ description: "General best practices for using Exa search tools. Covers citation
 | Need | Tool | When |
 |------|------|------|
 | Web search | `web_search_exa` | Current info, news, research, general questions, code examples |
-| Read a URL | `web_fetch_exa` | Extract content from a known URL |
+| Read a URL | `crawling_exa` | Extract content from a known URL |
 
 ## Citation Standards
 
@@ -32,7 +32,7 @@ When using Exa search results, always cite sources:
 
 1. Get your API key at https://dashboard.exa.ai/api-keys
 2. Add the MCP server in Cursor Settings → MCP
-3. Start searching with `/exa-search` or `/exa-company`
+3. Start searching with `/exa-search` or `/exa-fetch`
 
 ## Troubleshooting
 

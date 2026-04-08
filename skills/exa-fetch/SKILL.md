@@ -1,7 +1,7 @@
 ---
 name: exa-fetch
 description: "Read a webpage's full content using Exa. Gets clean markdown text from a specific URL. Use when you have a URL and need to read its contents."
-allowed-tools: mcp(exa:web_fetch_exa)
+allowed-tools: mcp(exa:crawling_exa)
 ---
 
 # Fetch URL (Exa)
@@ -10,7 +10,7 @@ Extract content from: $ARGUMENTS
 
 ## Tool
 
-Use `web_fetch_exa` to get the full text of a webpage.
+Use `crawling_exa` to get the full text of a webpage.
 
 ## When to Use
 
@@ -23,7 +23,7 @@ Use `web_search_exa` instead when you don't have a URL and need to find pages fi
 
 ## How to Fetch
 
-`web_fetch_exa` accepts:
+`crawling_exa` accepts:
 - `urls` (array of strings, required) — the URLs to extract content from
 - `maxCharacters` (number, optional) — max characters to return per page (default: 3000)
 
@@ -38,7 +38,7 @@ Use `web_search_exa` instead when you don't have a URL and need to find pages fi
 You can fetch multiple URLs in a single call:
 
 ```
-web_fetch_exa({
+crawling_exa({
   "urls": ["https://example.com/page1", "https://example.com/page2"],
   "maxCharacters": 3000
 })
@@ -52,7 +52,7 @@ web_fetch_exa({
 
 ## If the MCP Server Is Not Connected
 
-If `web_fetch_exa` is unavailable, **stop immediately**. Do NOT try to fetch the URL yourself, do NOT use any built-in tools, and do NOT try to answer from your own knowledge. Instead, tell the user:
+If `crawling_exa` is unavailable, **stop immediately**. Do NOT try to fetch the URL yourself, do NOT use any built-in tools, and do NOT try to answer from your own knowledge. Instead, tell the user:
 
 1. Exa MCP is not connected
 2. Run `/exa-setup` to add the MCP server
