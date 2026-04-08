@@ -36,5 +36,5 @@ When using Exa search results, always cite sources:
 
 ## Troubleshooting
 
-- **Tools not available**: Check your MCP connection in Cursor Settings → MCP
+- **Tools not available**: Exa MCP is not connected. Run `/exa-setup` to add the MCP server, then enable it in Cursor Settings → Tools & MCP.
 - **No results**: Try rephrasing the query or broadening search terms

@@ -52,4 +52,9 @@ web_fetch_exa({
 
 ## If the MCP Server Is Not Connected
 
-If `web_fetch_exa` is unavailable, tell the user to check their MCP connection in Cursor Settings → MCP.
+If `web_fetch_exa` is unavailable, **stop immediately**. Do NOT try to fetch the URL yourself, do NOT use any built-in tools, and do NOT try to answer from your own knowledge. Instead, tell the user:
+
+1. Exa MCP is not connected
+2. Run `/exa-setup` to add the MCP server
+3. Enable Exa in Cursor Settings → Tools & MCP
+4. Then retry the fetch

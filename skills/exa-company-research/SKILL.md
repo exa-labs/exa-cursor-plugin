@@ -68,4 +68,9 @@ Example for researching a company:
 
 ## If the MCP Server Is Not Connected
 
-If `web_search_exa` is unavailable, tell the user to check their MCP connection in Cursor Settings → MCP.
+If `web_search_exa` is unavailable, **stop immediately**. Do NOT search the web yourself, do NOT use any built-in search tools, and do NOT try to answer the query from your own knowledge. Instead, tell the user:
+
+1. Exa MCP is not connected
+2. Run `/exa-setup` to add the MCP server
+3. Enable Exa in Cursor Settings → Tools & MCP
+4. Then retry the search
