@@ -11,14 +11,6 @@
   "repository": "https://github.com/exa-labs/exa-cursor-plugin",
   "license": "MIT",
   "logo": "https://exa.imgix.net/exa-logo.jpg",
-  "category": "developer-tools",
-  "tags": [
-    "search",
-    "ai",
-    "web",
-    "research",
-    "mcp"
-  ],
   "keywords": [
     "search",
     "web-search",
@@ -27,7 +19,11 @@
     "mcp",
     "content-extraction"
   ],
-  "skills": "./skills/",
+  "skills": [
+    "skills/exa-web-search/SKILL.md",
+    "skills/exa-fetch/SKILL.md",
+    "skills/exa-best-practices/SKILL.md"
+  ],
   "rules": "./rules/",
   "mcpServers": "mcp.json",
   "commands": [
