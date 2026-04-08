@@ -1,6 +1,6 @@
 ---
 name: exa-best-practices
-description: "General best practices for using Exa search tools. Covers citation standards, tool selection, and search optimization."
+description: "Reference guide for Exa search tools — tool selection, citation standards, search optimization, and troubleshooting. Use when the user asks 'how do I use Exa', 'best practices', 'tips for searching', or needs help choosing between Exa tools. Also useful as background context for improving search quality."
 ---
 
 # Exa Best Practices
@@ -36,5 +36,5 @@ When using Exa search results, always cite sources:
 
 ## Troubleshooting
 
-- **Tools not available**: Exa MCP is not connected. Run `/exa-setup` to add the MCP server, then enable it in Cursor Settings → Tools & MCP.
+- **Tools not available**: Check if the Exa MCP server is installed. If `web_search_exa` or `web_fetch_exa` are not in your tool list, stop and request the user to: (1) run `/exa-setup` in Cursor to add the MCP server, and (2) go to **Cursor Settings → Tools & MCP** and make sure Exa is toggled **on** (green).
 - **No results**: Try rephrasing the query or broadening search terms

@@ -29,6 +29,7 @@
   ],
   "skills": "./skills/",
   "rules": "./rules/",
+  "mcpServers": "mcp.json",
   "commands": [
     "commands/exa-setup.md",
     "commands/exa-search.md",

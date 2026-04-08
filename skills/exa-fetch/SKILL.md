@@ -1,6 +1,6 @@
 ---
 name: exa-fetch
-description: "Read a webpage's full content using Exa. Gets clean markdown text from a specific URL. Use when you have a URL and need to read its contents."
+description: "URL content extraction using Exa. Gets clean markdown text from any webpage. Use when you have a specific URL and need its contents — articles, docs, blog posts, PDFs, or any web page. Triggers on: 'read this page', 'fetch this URL', 'extract content from', 'grab the text from', 'get the page at', 'what does this link say', or when a user shares a URL. Supports batching multiple URLs in a single call. Use exa-web-search instead when you don't have a URL yet."
 allowed-tools: mcp(exa:web_fetch_exa)
 ---
 
@@ -50,11 +50,19 @@ web_fetch_exa({
 2. If the user asked a specific question, answer it using the page content
 3. Include the source URL
 
+## Before You Start
+
+Check if Exa MCP is installed by confirming `web_fetch_exa` is available in your tool list.
+
 ## If the MCP Server Is Not Connected
 
-If `web_fetch_exa` is unavailable, **stop immediately**. Do NOT try to fetch the URL yourself, do NOT use any built-in tools, and do NOT try to answer from your own knowledge. Instead, tell the user:
+### You (the AI) must:
 
-1. Exa MCP is not connected
-2. Run `/exa-setup` to add the MCP server
-3. Enable Exa in Cursor Settings → Tools & MCP
-4. Then retry the fetch
+1. **Stop immediately** — do NOT try to fetch the URL yourself, do NOT use websearch, and do NOT try to answer from your own knowledge.
+2. Inform the user that Exa MCP is not connected.
+
+### Request the user to:
+
+1. Run the `/exa-setup` command in Cursor to add the Exa MCP server.
+2. Go to **Cursor Settings → Tools & MCP** and make sure Exa is toggled **on** (green).
+3. Retry their fetch after completing the above steps.
