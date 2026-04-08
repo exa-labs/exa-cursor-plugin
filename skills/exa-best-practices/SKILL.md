@@ -32,9 +32,9 @@ When using Exa search results, always cite sources:
 
 1. Get your API key at https://dashboard.exa.ai/api-keys
 2. Add the MCP server in Cursor Settings → MCP
-3. Start searching with `/exa-search` or `/exa-company`
+3. Start searching with `/exa-search` or `/exa-fetch`
 
 ## Troubleshooting
 
-- **Tools not available**: Check your MCP connection in Cursor Settings → MCP
+- **Tools not available**: Exa MCP is not connected. Run `/exa-setup` to add the MCP server, then enable it in Cursor Settings → Tools & MCP.
 - **No results**: Try rephrasing the query or broadening search terms
