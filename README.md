@@ -18,7 +18,7 @@ cd exa-cursor-plugin
 bash install.sh
 ```
 
-This copies the plugin to `~/.cursor/plugins/local/exa/`. Restart Cursor, then enable Exa under **Settings → Plugins**.
+This copies the plugin to `~/.cursor/plugins/local/exa/` and registers it in `~/.claude/` so Cursor discovers it. Restart Cursor, then enable Exa under **Settings → Plugins**.
 
 To uninstall: `bash install.sh --uninstall`
 
