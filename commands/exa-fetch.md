@@ -1,4 +1,5 @@
 ---
+name: exa-fetch
 description: "Read a webpage's content using Exa. Usage: /exa-fetch <url>"
 ---
 

@@ -4,13 +4,23 @@ Web search and content extraction for Cursor — powered by [Exa](https://exa.ai
 
 ## Install
 
-### Marketplace
+### From GitHub (recommended)
 
-Install from the [Cursor Marketplace](https://cursor.com/marketplace).
+In Cursor chat:
 
-### Local install (script)
+```
+/add-plugin exa-labs/exa-cursor-plugin
+```
 
-Clone the repo and run the install script:
+Or go to **Settings → Plugins → Add plugin** and paste:
+
+```
+https://github.com/exa-labs/exa-cursor-plugin
+```
+
+### Local folder
+
+Clone and copy into Cursor's local plugin directory:
 
 ```bash
 git clone https://github.com/exa-labs/exa-cursor-plugin.git
@@ -18,13 +28,13 @@ cd exa-cursor-plugin
 bash install.sh
 ```
 
-This copies the plugin to `~/.cursor/plugins/local/exa/` and registers it in `~/.claude/` so Cursor discovers it. Restart Cursor, then enable Exa under **Settings → Plugins**.
+This copies the plugin to `~/.cursor/plugins/local/exa/`. Restart Cursor afterward.
 
 To uninstall: `bash install.sh --uninstall`
 
-### Manual (MCP only)
+### MCP only
 
-If you only need the MCP tools (no skills, commands, or rules), add to `.cursor/mcp.json`:
+If you only want the MCP tools (no skills, commands, or rules), add to `.cursor/mcp.json`:
 
 ```json
 {
@@ -59,6 +69,17 @@ If you only need the MCP tools (no skills, commands, or rules), add to `.cursor/
 
 - `exa-awareness` — tells the agent to use Exa when it makes sense
 
+## Plugin Structure
+
+```
+.cursor-plugin/plugin.json   Plugin manifest
+skills/                      3 skills (auto-discovered)
+commands/                    3 slash commands (auto-discovered)
+rules/                       Awareness rule
+mcp.json                     MCP server config (remote)
+install.sh                   Local install helper
+```
+
 ## Local Development
 
 To iterate on the plugin itself:
@@ -72,24 +93,13 @@ cursor exa-cursor-plugin
 
 2. Skills, rules, and MCP config are auto-discovered from the repo's standard directories.
 
-3. To test as a real local plugin (with commands), install it:
+3. To test as a full plugin (with commands), copy to the local plugin dir:
 
 ```bash
 bash install.sh
 ```
 
-Re-run after each change to push updates to the local plugin directory.
-
-## Plugin Structure
-
-```
-.cursor-plugin/plugin.json   Plugin manifest
-.cursor/mcp.json             MCP server config (remote)
-skills/                      3 skills (auto-discovered)
-commands/                    3 slash commands
-rules/                       Awareness rule
-install.sh                   Local install/uninstall script
-```
+Re-run after each change to push updates.
 
 ## Links
 
