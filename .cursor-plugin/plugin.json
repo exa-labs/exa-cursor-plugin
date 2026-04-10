@@ -10,7 +10,7 @@
   "homepage": "https://docs.exa.ai",
   "repository": "https://github.com/exa-labs/exa-cursor-plugin",
   "license": "MIT",
-  "logo": "https://exa.imgix.net/exa-logo.jpg",
+  "logo": "assets/logo.jpg",
   "keywords": [
     "search",
     "web-search",
@@ -18,9 +18,5 @@
     "research",
     "mcp",
     "content-extraction"
-  ],
-  "skills": "./skills/",
-  "rules": "./rules/",
-  "mcpServers": "mcp.json",
-  "commands": "./commands/"
+  ]
 }
