@@ -4,7 +4,37 @@ Web search and content extraction for Cursor — powered by [Exa](https://exa.ai
 
 ## Install
 
-Install from the [Cursor Marketplace](https://cursor.com/marketplace), or add to `.cursor/mcp.json`:
+### From GitHub (recommended)
+
+In Cursor chat:
+
+```
+/add-plugin exa-labs/exa-cursor-plugin
+```
+
+Or go to **Settings → Plugins → Add plugin** and paste:
+
+```
+https://github.com/exa-labs/exa-cursor-plugin
+```
+
+### Local folder
+
+Clone and copy into Cursor's local plugin directory:
+
+```bash
+git clone https://github.com/exa-labs/exa-cursor-plugin.git
+cd exa-cursor-plugin
+bash install.sh
+```
+
+This copies the plugin to `~/.cursor/plugins/local/exa/`. Restart Cursor afterward.
+
+To uninstall: `bash install.sh --uninstall`
+
+### MCP only
+
+If you only want the MCP tools (no skills, commands, or rules), add to `.cursor/mcp.json`:
 
 ```json
 {
@@ -39,9 +69,20 @@ Install from the [Cursor Marketplace](https://cursor.com/marketplace), or add to
 
 - `exa-awareness` — tells the agent to use Exa when it makes sense
 
+## Plugin Structure
+
+```
+.cursor-plugin/plugin.json   Plugin manifest
+skills/                      3 skills (auto-discovered)
+commands/                    3 slash commands (auto-discovered)
+rules/                       Awareness rule
+mcp.json                     MCP server config (remote)
+install.sh                   Local install helper
+```
+
 ## Local Development
 
-To test the plugin locally without installing from the marketplace:
+To iterate on the plugin itself:
 
 1. Clone and open in Cursor:
 
@@ -50,27 +91,15 @@ git clone https://github.com/exa-labs/exa-cursor-plugin.git
 cursor exa-cursor-plugin
 ```
 
-2. Skills and rules are auto-discovered from the standard directories. Type `/` in the chat to verify the `exa-*` skills are listed.
+2. Skills, rules, and MCP config are auto-discovered from the repo's standard directories.
 
-3. Commands are not auto-discovered when testing locally. Symlink them into Cursor's project commands directory:
+3. To test as a full plugin (with commands), copy to the local plugin dir:
 
 ```bash
-ln -s ../commands .cursor/commands
+bash install.sh
 ```
 
-Type `/` again — the `exa-*` commands should now appear alongside the skills.
-
-4. The MCP server config is in `.cursor/mcp.json`. Cursor will prompt you to authenticate with Exa on first use.
-
-## Plugin Structure
-
-```
-.cursor-plugin/plugin.json   Plugin manifest
-.cursor/mcp.json             MCP server config (remote)
-skills/                      3 skills (auto-discovered)
-commands/                    3 slash commands
-rules/                       Awareness rule
-```
+Re-run after each change to push updates.
 
 ## Links
 

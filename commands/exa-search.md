@@ -1,4 +1,5 @@
 ---
+name: exa-search
 description: "Search the web using Exa. Usage: /exa-search <query>"
 ---
 
