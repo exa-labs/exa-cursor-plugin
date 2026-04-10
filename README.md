@@ -1,6 +1,6 @@
 # Exa Cursor Plugin
 
-[Exa](https://exa.ai) is the fastest and most accurate web search API. This plugin brings Exa's search and content extraction tools right into [Cursor](https://cursor.com), so the AI can find information and read webpages for you while you code.
+[Exa](https://exa.ai) is the fastest and most accurate web search API. This plugin has Exa's web search and crawling tools so the AI can search the web for you while you code.
 
 ## Features
 
