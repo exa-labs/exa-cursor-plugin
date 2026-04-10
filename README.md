@@ -1,4 +1,4 @@
-# Exa — Cursor Plugin
+# Exa Cursor Plugin
 
 Web search and content extraction for [Cursor](https://cursor.com), powered by [Exa](https://exa.ai).
 
@@ -44,7 +44,7 @@ If you just want the search tools without skills, commands, or rules, add this t
 }
 ```
 
-No API key needed — you'll be prompted to log in when you first use a tool.
+No API key needed. You'll be prompted to log in when you first use a tool.
 
 ## Quick Start
 
@@ -107,4 +107,4 @@ install.sh                    Local install helper
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
