@@ -29,9 +29,15 @@ If you just want the search tools without skills, commands, or rules, add this t
 }
 ```
 
-No API key needed. You'll be prompted to log in when you first use a tool.
+No API key needed.
 
 ## Quick Start
+
+**Set up the MCP server (first time only):**
+
+```
+/exa-setup
+```
 
 **Search the web:**
 
@@ -42,13 +48,7 @@ No API key needed. You'll be prompted to log in when you first use a tool.
 **Read a webpage:**
 
 ```
-/exa-fetch https://example.com/article
-```
-
-**Set up the MCP server (first time only):**
-
-```
-/exa-setup
+/exa-fetch https://nasa.gov
 ```
 
 ## Local Development
@@ -62,15 +62,15 @@ git clone https://github.com/exa-labs/exa-cursor-plugin.git
 cursor exa-cursor-plugin
 ```
 
-2. Skills, rules, and MCP config are auto-discovered from the repo's standard directories. Type `/` in the chat to verify the `exa-*` commands are listed.
-
-3. To test as a full plugin (with commands), run the install script:
+2. To test as a full plugin (with commands), run the install script:
 
 ```bash
 bash install.sh
 ```
 
-Re-run after each change to push updates. Restart Cursor to pick up changes.
+3. Type `/` in the chat to verify the `exa-web-search` skills are listed.
+
+If needed, restart Cursor to pick up changes.
 
 ## Links
 
