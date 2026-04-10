@@ -1,12 +1,19 @@
-# Exa Cursor Plugin
+# Exa — Cursor Plugin
 
-Web search and content extraction for Cursor — powered by [Exa](https://exa.ai).
+Web search and content extraction for [Cursor](https://cursor.com), powered by [Exa](https://exa.ai).
 
-## Install
+## Features
 
-### Local install (recommended)
+| Capability | Skill | Command |
+| --- | --- | --- |
+| **Web Search** | `exa-web-search` | `/exa-search <query>` |
+| **Content Extraction** | `exa-fetch` | `/exa-fetch <url>` |
 
-Clone and run the install script:
+Additional: `/exa-setup` (install the MCP server), `exa-best-practices` (search tips and citation guide), `exa-awareness` (rule that nudges the agent to use Exa when it makes sense).
+
+## Installation
+
+1. Clone and run the install script:
 
 ```bash
 git clone https://github.com/exa-labs/exa-cursor-plugin.git
@@ -14,15 +21,18 @@ cd exa-cursor-plugin
 bash install.sh
 ```
 
-This copies the plugin to `~/.cursor/plugins/local/exa/` and registers it in Cursor's config. Restart Cursor afterward (or `Cmd/Ctrl+Shift+P` → `Developer: Reload Window`).
+2. Restart Cursor (or `Cmd/Ctrl+Shift+P` → `Developer: Reload Window`).
+3. If the plugin doesn't appear, go to **Settings → Features** and enable **"Include third-party Plugins, Skills, and other configs"**.
 
-If the plugin doesn't appear, check **Settings → Features** and enable **"Include third-party Plugins, Skills, and other configs"**.
+To uninstall:
 
-To uninstall: `bash install.sh --uninstall`
+```bash
+bash install.sh --uninstall
+```
 
-### MCP only
+### MCP Only
 
-If you only want the MCP tools (no skills, commands, or rules), add to `.cursor/mcp.json`:
+If you just want the search tools without skills, commands, or rules, add this to `.cursor/mcp.json`:
 
 ```json
 {
@@ -34,44 +44,31 @@ If you only want the MCP tools (no skills, commands, or rules), add to `.cursor/
 }
 ```
 
-## What's Included
+No API key needed — you'll be prompted to log in when you first use a tool.
 
-### Tools (via MCP)
+## Quick Start
 
-- `web_search_exa` — search the web
-- `web_fetch_exa` — read a webpage's full content
-
-### Commands
-
-- `/exa-setup` — set up the Exa MCP server
-- `/exa-search <query>` — web search
-- `/exa-fetch <url>` — read a URL
-
-### Skills
-
-- `exa-web-search` — how to search the web with Exa
-- `exa-fetch` — how to read URLs
-- `exa-best-practices` — general tips
-
-### Rules
-
-- `exa-awareness` — tells the agent to use Exa when it makes sense
-
-## Plugin Structure
+**Search the web:**
 
 ```
-.cursor-plugin/plugin.json   Plugin manifest
-skills/                      3 skills (auto-discovered)
-commands/                    3 slash commands (auto-discovered)
-rules/                       Awareness rule
-assets/                      Plugin logo
-mcp.json                     MCP server config (remote)
-install.sh                   Local install helper
+/exa-search latest developments in quantum computing
+```
+
+**Read a webpage:**
+
+```
+/exa-fetch https://example.com/article
+```
+
+**Set up the MCP server (first time only):**
+
+```
+/exa-setup
 ```
 
 ## Local Development
 
-To iterate on the plugin itself:
+To test the plugin from source:
 
 1. Clone and open in Cursor:
 
@@ -80,7 +77,7 @@ git clone https://github.com/exa-labs/exa-cursor-plugin.git
 cursor exa-cursor-plugin
 ```
 
-2. Skills, rules, and MCP config are auto-discovered from the repo's standard directories.
+2. Skills, rules, and MCP config are auto-discovered from the repo's standard directories. Type `/` in the chat to verify the `exa-*` commands are listed.
 
 3. To test as a full plugin (with commands), run the install script:
 
@@ -90,12 +87,24 @@ bash install.sh
 
 Re-run after each change to push updates. Restart Cursor to pick up changes.
 
+## Plugin Structure
+
+```
+.cursor-plugin/plugin.json   Plugin manifest
+skills/                       3 skills (auto-discovered)
+commands/                     3 slash commands
+rules/                        Awareness rule
+assets/                       Plugin logo
+mcp.json                      MCP server config (remote)
+install.sh                    Local install helper
+```
+
 ## Links
 
-- [Docs](https://docs.exa.ai)
-- [API Keys](https://dashboard.exa.ai/api-keys)
-- [MCP Server](https://github.com/exa-labs/exa-mcp-server)
+- [Exa Docs](https://docs.exa.ai)
+- [Get an API Key](https://dashboard.exa.ai/api-keys)
+- [Exa MCP Server](https://github.com/exa-labs/exa-mcp-server)
 
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
